@@ -45,6 +45,7 @@
             &__card {
                 background-color: variables.$cardBg;
                 border-radius: 12px;
+                transition: ease 0.5s;
 
                 &:hover {
                     cursor: pointer;
@@ -56,19 +57,17 @@
                 &__info {
                     padding: 16px;
                     text-align: center;
-                    
-                    p {
-                        width: 100%;
-                        margin-top: 16px;
-                    }
-
-                    a {
-                        
-                    }
 
                     .text {
-                        color: variables.$txtSecondC;
+                        color: variables.$txtMainC;
                         font-size: 16px;
+                        width: 100%;
+                        margin-top: 16px;
+                        
+                        &--small {
+                            color: variables.$txtSecondC;
+                            margin-top: 8px;
+                        }
                     }
                 }
             }
