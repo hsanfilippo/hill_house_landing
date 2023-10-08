@@ -1,0 +1,44 @@
+.episodes {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 5vw;
+    
+    @media (min-width: 900px) and (max-width: 1300px) {
+        max-width: 1024px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        @media (min-width: 900px) and (max-width: 1300px) {
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        &__item {
+            margin-top: 24px;
+            max-width: 700px;
+
+            img {
+                border-radius: 12px;
+                width: 90%;
+
+                @media (min-width: 900px) and (max-width: 1300px) {
+                    max-width: 400px;
+                    width: 100%;
+                }
+            }
+
+            p {
+                width: 85%;
+                margin-top: 16px;
+            }
+
+            .text {
+                color: rgb(148, 148, 148);
+                font-size: 16px;
+            }
+        }
+    }
+}

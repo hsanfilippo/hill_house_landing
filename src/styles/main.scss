@@ -1,0 +1,50 @@
+@use 'variaveis';
+@use 'hero';
+@use 'cast';
+@use 'episodes';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(29, 29, 29);
+}
+
+@mixin text ($fontSize: 18px) {
+    font-size: $fontSize;
+    font-family: sans-serif;
+    line-height: $fontSize + 6px;
+    color: variaveis.$textMainColor;
+}
+
+@mixin title ($fontSize: 55px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 6px;
+    color: variaveis.$textMainColor;
+}
+
+.text--big {
+    @include text(24px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(12px);
+}
+
+.title--big {
+    @include title(70px);
+}
+
+.title {
+    @include title;
+}
+
+.title--small {
+    @include title(45px);
+}
