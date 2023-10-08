@@ -1,21 +1,27 @@
+@use 'variables';
+
 .hero {
 
     &__content {
-        color: #fff;
+        color: variables.$titleMainC;
         margin: 0 auto;
         
         &__image {
             position: relative;
 
-            @media (min-width: 900px) and (max-width: 1300px) {
+            @media (variables.$minMedium) and (variables.$maxMedium) {
                 overflow-x: hidden;
             }
 
             img {
                 width: 100%;
 
-                @media (min-width: 900px) and (max-width: 1300px) {
+                @media (variables.$minMedium) and (variables.$maxMedium) {
                     width: 130%;
+                }
+
+                @media (variables.$minSmall) and (variables.$maxSmall) {
+                    width: 120%;
                 }
             }
         }

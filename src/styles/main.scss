@@ -1,4 +1,4 @@
-@use 'variaveis';
+@use 'variables';
 @use 'hero';
 @use 'cast';
 @use 'episodes';
@@ -16,13 +16,13 @@ body {
     font-size: $fontSize;
     font-family: sans-serif;
     line-height: $fontSize + 6px;
-    color: variaveis.$textMainColor;
+    color: variables.$txtMainC;
 }
 
 @mixin title ($fontSize: 55px) {
     font-size: $fontSize;
     line-height: $fontSize + 6px;
-    color: variaveis.$textMainColor;
+    color: variables.$txtMainC;
 }
 
 .text--big {

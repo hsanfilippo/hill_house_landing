@@ -1,7 +1,15 @@
+@use 'variables';
+
 .episodes {
     max-width: 1600px;
     margin: 0 auto;
     padding: 5vw;
+    
+    a {
+        text-decoration: none;
+        color: variables.$txtMainC;
+        font-family: sans-serif;
+    }
     
     @media (min-width: 900px) and (max-width: 1300px) {
         max-width: 1024px;
@@ -35,7 +43,7 @@
             }
 
             &__card {
-                background-color: #3a3a3a;
+                background-color: variables.$cardBg;
                 border-radius: 12px;
 
                 &:hover {
@@ -54,14 +62,12 @@
                         margin-top: 16px;
                     }
 
-                    button {
-                        max-width: 200px;
-                        font-size: 14px;
-                        padding: 8px;
+                    a {
+                        
                     }
 
                     .text {
-                        color: rgb(148, 148, 148);
+                        color: variables.$txtSecondC;
                         font-size: 16px;
                     }
                 }
