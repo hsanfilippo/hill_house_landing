@@ -10,6 +10,7 @@
     &__grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        gap: 32px;
 
         @media (min-width: 900px) and (max-width: 1300px) {
             grid-template-columns: 1fr 1fr;
@@ -17,27 +18,53 @@
         }
 
         &__item {
-            margin-top: 24px;
-            max-width: 700px;
+            margin-top: 40px;
+            max-width: 500px;
+
+            @media (min-width: 900px) and (max-width: 1300px) {
+                max-width: 700px;
+            }
 
             img {
-                border-radius: 12px;
-                width: 90%;
+                border-radius: 12px 12px 0 0;
+                width: 100%;
 
                 @media (min-width: 900px) and (max-width: 1300px) {
-                    max-width: 400px;
                     width: 100%;
                 }
             }
 
-            p {
-                width: 85%;
-                margin-top: 16px;
-            }
+            &__card {
+                background-color: #3a3a3a;
+                border-radius: 12px;
 
-            .text {
-                color: rgb(148, 148, 148);
-                font-size: 16px;
+                &:hover {
+                    cursor: pointer;
+                    scale: 1.02;
+                    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
+                    transition: ease 0.5s;
+                }
+
+                &__info {
+                    padding: 16px;
+                    text-align: center;
+                    
+                    p {
+                        width: 100%;
+                        margin-top: 16px;
+                    }
+
+                    button {
+                        max-width: 200px;
+                        font-size: 14px;
+                        padding: 8px;
+                    }
+
+                    .text {
+                        color: rgb(148, 148, 148);
+                        font-size: 16px;
+                    }
+                }
             }
         }
     }
