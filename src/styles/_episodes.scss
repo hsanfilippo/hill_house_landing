@@ -10,34 +10,25 @@
         color: variables.$txtMainC;
         font-family: sans-serif;
     }
-    
-    @media (min-width: 900px) and (max-width: 1300px) {
-        max-width: 1024px;
-    }
 
     &__grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 32px;
 
-        @media (min-width: 900px) and (max-width: 1300px) {
+        @media (variables.$minMedium) and (variables.$maxMedium) {
             grid-template-columns: 1fr 1fr;
-            gap: 32px;
+            gap: 16px;
         }
 
         &__item {
             margin-top: 40px;
-            max-width: 500px;
-
-            @media (min-width: 900px) and (max-width: 1300px) {
-                max-width: 700px;
-            }
 
             img {
                 border-radius: 12px 12px 0 0;
                 width: 100%;
 
-                @media (min-width: 900px) and (max-width: 1300px) {
+                @media (variables.$minMedium) and (variables.$maxMedium) {
                     width: 100%;
                 }
             }
@@ -45,11 +36,12 @@
             &__card {
                 background-color: variables.$cardBg;
                 border-radius: 12px;
-                transition: ease 0.5s;
+                transition: ease 0.2s;
+                width: 100%;
 
                 &:hover {
                     cursor: pointer;
-                    scale: 1.02;
+                    scale: 1.01;
                     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
                     transition: ease 0.5s;
                 }

@@ -1,9 +1,11 @@
+@use 'variables';
+
 .cast {
     max-width: 1600px;
     margin: 0 auto;
     padding: 5vw;
 
-    @media (min-width: 900px) and (max-width: 1300px) {
+    @media (variables.$minMedium) and (variables.$maxMedium) {
         max-width: 1024px;
     }
     
@@ -11,7 +13,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
-        @media (min-width: 900px) and (max-width: 1300px) {
+        @media (variables.$minMedium) and (variables.$maxMedium) {
             grid-template-columns: 1fr 1fr 1fr 1fr;
         }
 

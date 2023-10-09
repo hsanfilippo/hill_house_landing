@@ -1,9 +1,9 @@
 @use 'variables';
 
 .hero {
-
     &__content {
         color: variables.$titleMainC;
+        max-width: 100%;
         margin: 0 auto;
         
         &__image {
@@ -14,14 +14,14 @@
             }
 
             img {
-                width: 100%;
+                max-width: 100%;
 
                 @media (variables.$minMedium) and (variables.$maxMedium) {
-                    width: 130%;
+                    max-width: 135%;
                 }
 
                 @media (variables.$minSmall) and (variables.$maxSmall) {
-                    width: 120%;
+                    max-width: 220%;
                 }
             }
         }
@@ -31,7 +31,18 @@
             left: 0px;
             padding: 60px;
             position: absolute;
-            max-width: 450px;
+            max-width: 350px;
+
+            .title--big {
+                font-size: 45px;
+                line-height: 51px;
+            }
+
+            .text {
+                @media (variables.$minMedium) and (variables.$maxMedium) {
+                    font-size: 14px;
+                }
+            }
 
             p {
                 margin-top: 24px;
