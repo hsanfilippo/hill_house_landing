@@ -11,7 +11,8 @@
     
     &__grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 20px;
 
         @media (variables.$minMedium) and (variables.$maxMedium) {
             grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -26,6 +27,13 @@
             img {
                 border-radius: 8px;
                 width: 95%;
+                transition: ease 0.5s;
+                
+                &:hover {
+                    scale: 1.05;
+                    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
+                    transition: ease 0.5s;
+                }
             }
 
             p {
