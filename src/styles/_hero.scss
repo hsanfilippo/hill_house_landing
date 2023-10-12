@@ -95,13 +95,19 @@
         &__watch {
 
             &__logo {
-                background-color: #ffffff;
+                background-color: #fff;
                 height: 25px;
                 width: 90px;
                 padding: 10px;
                 border-radius: 8px;
 
             }
+
+            &__description {
+                text-align: center;
+                margin-top: -16px;
+            }
+
             .text {
                 margin: 16px 0;
             }
