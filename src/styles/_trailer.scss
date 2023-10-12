@@ -1,0 +1,10 @@
+.trailer {
+    max-width: 1600px;
+    padding: 5vw;
+    margin: 0 auto;
+
+    &__content {
+        display: flex;
+        justify-content: space-around;
+    }
+}
