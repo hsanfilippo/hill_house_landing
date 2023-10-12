@@ -3,6 +3,10 @@
 .hero {
     margin-bottom: 120px;
 
+    @media (variables.$maxSmall) {
+        margin-bottom: 190px;
+    }
+
     @media (variables.$minMedium) and (variables.$maxMedium) {
         margin-bottom: 50px;
     }
@@ -15,6 +19,10 @@
         &__image {
             position: relative;
 
+            @media (variables.$maxSmall) {
+                overflow-x: hidden;
+            }
+
             @media (variables.$minMedium) and (variables.$maxMedium) {
                 overflow-x: hidden;
             }
@@ -22,12 +30,12 @@
             img {
                 max-width: 100%;
 
-                @media (variables.$minMedium) and (variables.$maxMedium) {
-                    max-width: 135%;
+                @media (variables.$maxSmall) {
+                    max-width: 140%;
                 }
 
-                @media (variables.$minSmall) and (variables.$maxSmall) {
-                    max-width: 220%;
+                @media (variables.$minMedium) and (variables.$maxMedium) {
+                    max-width: 135%;
                 }
             }
         }
@@ -42,6 +50,11 @@
             .title--big {
                 font-size: 65px;
 
+                @media (variables.$maxSmall) {
+                    font-size: 50px;
+                    line-height: 56px;
+                }
+
                 @media (variables.$minMedium) and (variables.$maxMedium) {
                     font-size: 55px;
                     line-height: 61px;
@@ -50,8 +63,15 @@
             }
 
             .text {
-                @media (variables.$minMedium) and (variables.$maxMedium) {
+
+                @media (variables.$maxSmall) {
                     font-size: 14px;
+                    line-height: 20px;
+                }
+
+                @media (variables.$minMedium) and (variables.$maxMedium) {
+                    font-size: 16px;
+                    line-height: 22px;
                 }
             }
 

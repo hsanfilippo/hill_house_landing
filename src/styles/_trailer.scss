@@ -1,10 +1,28 @@
+@use 'variables';
+
 .trailer {
     max-width: 1600px;
     padding: 5vw;
     margin: 0 auto;
 
     &__content {
-        display: flex;
-        justify-content: space-around;
+        &__desktop-tablet {
+            display: flex;
+            justify-content: space-around;
+
+            @media (variables.$maxSmall) {
+                display: none;
+            }
+        }
+
+        &__mobile {
+            display: flex;
+            justify-content: space-around;
+
+            @media (variables.$minMedium) {
+                display: none;
+            }
+        }
+
     }
 }
